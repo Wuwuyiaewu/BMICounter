@@ -1,0 +1,307 @@
+/*guild*/
+/*global*/
+/*標頭*/
+/*大圖BANNER*/
+/*輸入區塊*/
+/*input提示顏色*/
+/*傳送資料按鈕 */
+/*按鈕切換*/
+/*BMI等級評價*/
+/*內容表單*/
+/*表單桌面*/
+/*標尾*/
+/**/
+/**************************/
+/* $global */
+*{
+	box-sizing: border-box;
+}
+html{
+	overflow-y: scroll;
+}
+body{
+	background: #191919;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+}
+.clearfix{
+	display: block;
+	clear: both;
+}
+/* $標頭 */
+header{
+	position: relative;
+	background: rgb(66,66,66);
+	height: 300px;
+}
+/* $大圖BANNER */
+.bmiLogo{
+	background-image: url(../assets/BMICLogo.png);
+	position: absolute;
+	top: 92px;
+	left: 173px;
+	width: 117px;
+	height: 117px;
+}
+/* $輸入區塊 */
+.keyInArea{
+	position: absolute;
+	top: 74px;
+	left: 387px;
+
+	width: 250px;
+}
+.keyInArea_heightLabel,.keyInArea_weightLabel{
+	display: block;
+
+	font-size: 18px;
+	line-height: 21px;
+	color: #FFD366;
+
+	padding-bottom: 7px;
+}
+.keyInArea input{
+	position: relative;
+	display: block;
+	width: 250px;
+	height: 40px;
+	
+	padding: 8px 16px;
+	margin-bottom: 32px;
+
+	font-size: 24px;
+	line-height: 28px;
+	color: #FFD366;
+
+	background: rgba(255,255,255,0.18);;
+	border: 2px solid #FFD366;
+	border-radius: 10px;
+	outline: none;
+}
+	/* $input提示顏色 */
+.keyInArea input::placeholder{
+	color: #fff;
+}
+	/* $傳送資料按鈕 */
+.keyInArea_submitArea{
+	position: absolute;
+	top: 18px;
+	left: 303px;
+}
+.keyInArea_submitArea input{
+	/* js更動項 */
+	/*display: none;*/
+	width: 120px;
+	height: 120px;
+
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 25px;
+	color: #424242;
+
+	margin-bottom: 0;
+	border-radius: 50%;
+	background: #FFD366;
+}
+.keyInArea_submitArea input:hover{
+	box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+	cursor: pointer;
+}
+.keyInArea_submitArea input:active{
+	background: #DEA921;
+	border: none;
+	box-shadow: none;
+}
+	/* $按鈕切換 */
+.keyInArea_submitArea_BMIresult{
+	/* js更動項 */
+	display: none;
+	width: 120px;
+	height: 120px;
+
+	padding-top: calc(50% - 41px);
+	
+	font-weight: 900;
+	text-align: center;
+
+	/* js更動項 */
+	border: 6px solid #86D73F;
+	border-radius: 50%;
+}
+.keyInArea_submitArea_BMIresult span:nth-child(1){
+	display: block;
+	line-height: 38px;
+	font-size: 32px;
+	/* js更動項 */
+	color: #86D73F;
+}
+.keyInArea_submitArea_BMIresult span:nth-child(2){
+	display: block;
+	line-height: 17px;
+	font-size: 14px;
+	/* js更動項 */
+	color: #86D73F;
+}
+.keyInArea_submitArea_BMIresultOut{
+	display: block;
+	width: 64px;
+	position: absolute;
+	top: 48px;
+	left: 141px;
+
+	line-height: 32px;
+}
+/* 重新載入 */
+.keyInArea_reloadArea{
+	/* js更動項 */
+	display: none;
+	position: absolute;
+	top: 87px;
+	left: 93px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	/* js更動項 */
+	background: #86D73E;
+	border-radius: 50%;
+	/* js更動項 */
+	border: 3px solid #424242;
+	cursor: pointer;
+
+}
+.keyInArea_reloadArea img{
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	animation: rotate 3s infinite linear;
+}
+@keyframes rotate{
+	0%{}
+	100%{transform: rotate(360deg)}
+}
+/* $BMI等級評價	*/
+.howBmiLevel{
+	/* js更動項 */
+	display: none;
+	position: absolute;
+	top: 137px;
+	left: 829px;
+}
+.howBmiLevel p{
+	line-height: 38px;
+	font-size: 32px;
+	/* js更動項 */
+	color: #86D73E;
+}
+.BMILevel_1{background: #31BAF9 ;}
+.BMILevel_2{background: #86D73F ;}
+.BMILevel_3{background: #FF982D ;}
+.BMILevel_4{background: #FF6C02 ;}
+.BMILevel_5{background: #FF4C42 ;}
+.BMILevel_6{background: #FF1200 ;}
+/* $內容表單 */
+section{
+	min-height: calc(100vh - 390px);
+	background: #F5F5F5;
+	overflow: hidden;
+}
+.mainSection{
+	font-size: 14px;
+	line-height: 18px;
+	/* 表單文字靠左 */
+	text-align: left;
+}
+.BMI_helper{
+	width: 800px;
+	
+	margin: 0 auto;
+	padding-bottom: 16px;
+
+}
+.BMItitle{
+	text-align: center;
+
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 28px;
+	color: #424242;
+	padding-top: 48px;
+}
+.helper_colorPet{
+	float: left;
+}
+.helper_colorPet span:nth-child(1),.helper_colorPet span:nth-child(2),.helper_colorPet span:nth-child(3),.helper_colorPet span:nth-child(4),.helper_colorPet span:nth-child(5),.helper_colorPet span:nth-child(6){
+	width: 10px;
+	height: 10px;
+	
+	font-weight: 600;
+	color: #444;
+
+	padding: 0 4px;
+}
+.helper_colorPet span:nth-child(1){background: #31BAF9 ;}
+.helper_colorPet span:nth-child(2){background: #86D73F ;}
+.helper_colorPet span:nth-child(3){background: #FF982D ;}
+.helper_colorPet span:nth-child(4){background: #FF6C02 ;}
+.helper_colorPet span:nth-child(5){background: #FF4C42 ;}
+.helper_colorPet span:nth-child(6){background: #FF1200 ;}
+.helper_math{
+	float: right;
+}
+/* $表單桌面 */
+.BMIlist{
+	width: 800px;
+	
+	text-align: center;
+	font-weight: 900;
+	font-size: 18px;
+	line-height: 24px;
+	color: #555;
+
+	margin: 0 auto;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+
+
+	background: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 1px #FFD366;
+	border: 3px solid #fff;
+}
+.BMIlist_inner tr,.BMIlist_inner th,.BMIlist_inner td{
+	border: 3px solid #fff;
+}
+.tablebody tr span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+
+	border-radius: 50%;
+	/* js更動項 */
+	background: ;
+}
+.BMIlist a{
+	color: #555;
+	text-decoration: none;
+}
+.BMIlist a:hover{
+	color: red;
+}
+/* $標尾 */
+footer{
+	width: 1024px;
+	height: 90px;
+	background: #FFD366;
+	text-align: center;
+	overflow: hidden;
+}
+.BMIlogoBlack{
+	width: 55px;
+	height: 55px;
+	
+	margin:18px auto;
+
+	background-image: url(../assets/BMICLogo_black.png);
+	background-size: cover;
+}

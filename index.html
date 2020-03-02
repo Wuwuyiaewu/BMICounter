@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="description" content="BMI檢測，數據標準由衛生局公布">
+	<meta name="author" content="哲也">
+	<meta name="generator" content="VScode">
+	<meta neme="copyright" content="素材由六角學院提供">
+	<title>BMI紀錄</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="bmiLogo"></div>
+			<form class="keyInArea">
+				<label for="" class="keyInArea_heightLabel">
+					身高 cm
+				</label>
+				<input type="number" class="keyInArea_height" placeholder="請輸入身高">
+				<label for="" class="keyInArea_weightLabel">
+					體重 kg
+				</label>
+				<input type="number" class="keyInArea_weight" placeholder="請輸入體重">
+				<div class="keyInArea_submitArea">
+					<input type="submit" value="看結果">
+					<div class="keyInArea_submitArea_BMIresult">
+						<span></span>
+						<span>BMI</span>
+						<span class="keyInArea_submitArea_BMIresultOut"></span>
+					</div>
+					<div class="keyInArea_reloadArea" href="#">
+						<img src="assets/icons_loop.png" alt="">
+					</div>
+				</div>
+			</form>
+			<div class="howBmiLevel">
+				<p>理想</p>
+			</div>
+		</header>
+		<section class="mainSection">
+		<!-- 如何利用window.innerHeight設定min-height而不用clac(100vh - 多少) 去計算 -->
+		<div class="BMI_helper">
+			<h1 class="BMItitle">BMI 紀錄</h1>
+			<!-- 清除浮動 -->
+			<div class="clearfix"></div>
+			<p>根據身體質量指數(Body Mass Index, BMI)來判定肥胖程度，BMI指數愈高，罹患肥胖相關疾病的機率也就愈高。</p>
+			<p class="helper_colorPet">
+				<span>過輕</span><span>正常</span><span>過重</span><span>肥胖</span><span>中度肥胖</span><span>嚴重肥胖</span>
+			</p>
+			<p class="helper_math">
+				BMI＝體重(kg)/身高<sup>2</sup>(m<sup>2</sup>)
+			</p>
+			<div class="clearfix"></div>
+		</div>
+			
+		<table class="BMIlist">
+			<thead>
+				<tr>
+					<th>警示燈號</th>
+					<th>BMI</th>
+					<th>身高</th>
+					<th>體重</th>
+					<th>測量日期</th>
+					<th>清除資料</th>
+				</tr>
+			</thead>
+			<tbody class="tablebody">
+				<!-- 格式(被js先覆蓋)，避免跑版抖動用 -->
+				<tr data-num='1' style="visibility: hidden;">
+					<td>
+						<span></span>
+					</td>
+					<td>
+						23.23
+					</td>
+					<td>
+						166
+					</td>
+					<td>66</td>
+					<td>108/4/30/17:16</td>
+					<td><a href="#" class="splice"><i class="fas fa-trash-alt"></i></a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		</section>
+		<footer>
+			<div class="BMIlogoBlack"></div>
+		</footer>
+	</div>
+</body>
+<script src="js/all.js"></script>
+</html>
